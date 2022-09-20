@@ -7,7 +7,7 @@ string[] CreateArray(int size)
 
     for (int i = 0; i < size; i++)
     {
-        System.Console.Write($"Строка № {i + 1}: ");
+        System.Console.Write($"Элемент № {i + 1}: ");
         array[i] = Console.ReadLine();
     }
     
@@ -25,5 +25,21 @@ void PrintArray(string[] array)
     Console.Write("]");
 }
 
+string[] NumberOfCharacters (string[] array)
+{
+    string[] arrayTwo = new string[array.Length];
+
+    for (int i = 0; i < arrayTwo.Length; i++)
+    {
+        if (array[i].Length <= 3)
+        {
+            arrayTwo[i] = array[i];
+        }
+    }
+    return arrayTwo;
+}
+
 string[] arr = CreateArray(size);
 PrintArray(arr);
+string[] arr2 = NumberOfCharacters(arr);
+PrintArray(arr2);
